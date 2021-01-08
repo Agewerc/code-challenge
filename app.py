@@ -13,5 +13,5 @@ def home():
     try:
          new_data = data[data['raceStartTime'] > dayTime]
          return head(new_data)
-    except KeyError
+    except KeyError:
         return 'Invalid Input'
