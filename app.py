@@ -12,6 +12,6 @@ def home():
     dayTime = request.args['dayTime']
     try:
          new_data = data[data['raceStartTime'] > dayTime]
-         return head(new_data)
+         return new_data.head()
     except KeyError:
         return 'Invalid Input'
