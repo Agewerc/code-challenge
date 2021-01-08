@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 @app.route('/', methods=['GET'])
 
 def home():
-    dayTime = request.args['dayTime']
+    dayTime = float(request.args['dayTime'])
     try:
          return type(dayTime)#data[data['raceStartTime'] > float(dayTime)].head()
     except KeyError:
