@@ -6,11 +6,10 @@ data = pd.read_csv('race_dataset.csv', names=['raceType', 'raceNumber', 'raceNam
 
 app = flask.Flask(__name__)
 
-
 @app.route('/', methods=['GET'])
 def home():
-    dayTime = float(request.args['dayTime'])
+    dayTime = request.args['dayTime']
     try:
-        return dayTime #data[data['raceStartTime'] > dayTime].head()
+        return data[data['raceStartTime'] > 12.05].head()
     except KeyError:
         return 'Invalid Input'
