@@ -6,7 +6,8 @@ data = pd.read_csv('race_dataset.csv', names = ['raceType', 'raceNumber', 'raceN
 
 app = flask.Flask(__name__)
 
-@app.route('/', methods= ['GET'])
+@app.route('/', methods=['GET'])
+
 def home():
     dayTime = request.args['dayTime']
     try:
