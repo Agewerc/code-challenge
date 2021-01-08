@@ -20,5 +20,3 @@ def home():
         return f'Invalid Input'
 
 
-
-@app.route('')
