@@ -8,8 +8,11 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    dayTime = request.args['dayTime']
+    dayTime = float(request.args['dayTime'])
     try:
-        return data[data['raceStartTime'] > 12.05].head()
+        return data[data['raceStartTime'] > dayTime].head().to_dict()
     except KeyError:
         return 'Invalid Input'
+
+if __name__ == '__main__':
+    app.run()
