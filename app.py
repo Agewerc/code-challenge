@@ -9,8 +9,8 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    dayTime = request.args['dayTime']
+    dayTime = request.args['dayTime'][0]
     try:
-        return "Alan" #data[data['raceStartTime'] > dayTime].head()
+        return dayTime #data[data['raceStartTime'] > dayTime].head()
     except KeyError:
         return 'Invalid Input'
