@@ -1,4 +1,5 @@
 import flask
+from flask import request
 import pandas as pd
 
 data = pd.read_csv('race_dataset.csv', names = ['raceType', 'raceNumber', 'raceName', 'venue', 'raceStartTime'])
