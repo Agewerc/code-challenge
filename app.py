@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 def home():
     dayTime = request.args['dayTime']
     try:
-         new_data = data[data['raceStartTime'] > dayTime]
-         return new_data.head()
+         return dayTime
+         # return data[data['raceStartTime'] > dayTime].head()
     except KeyError:
         return 'Invalid Input'
