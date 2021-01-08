@@ -1,12 +1,8 @@
 # Flask API
 ## An API that returns "Next to jump" races
 
-
-
-
-
 This repository was developed in order to create an API that returns data from horse races. The app was developed in Python with the Flask framework. 
-
+It aims to return requested data from the user about the next races given a specific hour of the day. If a user makes a request with `dayTime = 14.00` - which means 14 pm, the data returned will be the next 5 races starting from that moment - including the venue, race number and more information.
 
 ### Dataset - race_dataset.csv
 The dataset was generated synthetically using python (not in this repository) just for demonstration purposes.  
@@ -45,6 +41,7 @@ All of these requests should return data in a JSON format. This is what a typica
 ```
 {"raceName":{"0":"Immortal Fiends","1":"Immortal Fiends","2":"Forest Angels","3":"Shore Undine","4":"Immortal Fiends"},"raceNumber":{"0":9,"1":7,"2":2,"3":22,"4":18},"raceStartTime":{"0":12.1,"1":12.11,"2":12.11,"3":12.12,"4":12.14},"raceType":{"0":"Saddle Trotting","1":"Saddle Trotting","2":"Jump racing","3":"Saddle Trotting","4":"Harness racing"},"venue":{"0":"Ladbrokes Park,\u00a0Melbourne,\u00a0Victoria\u00a0(formerly Sandown Racecourse)","1":"Doomben Racecourse,\u00a0Brisbane, Queensland","2":"Wangaratta Racecourse,\u00a0Wangaratta, Victoria","3":"Warrnambool Racecourse,\u00a0Warrnambool, Victoria","4":"Wyong Race Club,\u00a0Wyong, New South Wales"}}
 ```
+
 
 ### Reference
 Flask API: https://programminghistorian.org/en/lessons/creating-apis-with-python-and-flask
